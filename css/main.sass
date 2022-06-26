@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap')
+$blue: #4C7A94
+$green: #53A85B
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Manrope', sans-serif
+    transition: .2s
+body
+    scroll-behavior: smooth
+    text-rendering: optimizeSpeed
+.container-fluid
+    max-width: 100%
+    width: 100%
+    padding: 0px 0px
+    margin: 0 auto
+.container
+    max-width: 1440px
+    width: 100%
+    padding: 0px 20px
+    margin: 0px auto
+.modal-container
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    max-width: 100%
+.btn
+    display: none
+h1,
+h2,
+h3
+    font-size: 48px
+h4
+    font-size: 34px
+.modal
+    max-width: 100%
+    width: 100%
+    z-index: 10000
+.info-tovar
+    display: flex
+    flex-direction: column
+    .slide-container
+        max-width: 300px
+    .carousel-container *
+        box-sizing: border-box
+
+.carousel-container
+    img
+        max-width: 100%
+        max-height: 267px
+
+.carousel,
+.carousel-nav--vertical
+    margin: 0
+    padding: 0
+    float: right
+    width: 25%
+
+.carousel
+    float: right
+    width: 75%
+    &-nav-list
+        list-style-type: none
+        margin: 0
+        padding: 0
+        margin-right: 1%
+        text-align: center
+    &-nav-item
+        margin-bottom: 15px
+    &-details
+        display: none
+    &-nav-item-active
+        position: relative
+    &-nav-item-details
+        display: block
+.tovar-option
+    .select
+        position: relative
+        margin-top: 20px
+        select
+            display: block
+            width: 100%
+            padding: .75rem 2.5rem .75rem 1rem
+            background: none
+            border: 1px solid #ccc
+            border-radius: 3px
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            font-family: inherit
+            font-size: 1rem
+            color: #444
+            &::after
+                content: "url(..//img/select-ico.svg)"
+                display: block
+                border-style: solid
+                border-width: 6px 5px 0 5px
+                border-color: #000
+                pointer-events: none
+                position: absolute
+                top: 50%
+                right: 1rem
+                z-index: 1
+                margin-top: -3px
+            &:focus
+                outline: 0
+                border-color: #0891e6
+.tovar-sb
+    margin-top: 25px
+    p
+        border: 1px solid #4C7A94
+        padding: 10px
+        max-width: 279px
+        border-radius: 10px
+        color: #4C7A94
+.table-info
+    table
+        border-collapse: collapse
+        text-align: left
+        color: #000
+        width: 100%
+        margin-bottom: 20px
+        border: 1px solid #dddddd
+        border-collapse: collapse
+    th,td
+        padding: 8px
+        align-items: center
+        align-self: center
+        p
+            margin: 5px
+    tr
+        border: 2px solid #eee
+        border-style: solid
+        border-width: 0 1px 1px 0
+        background-color: #fff
+        &:nth-child(odd)
+            background-color: #fbfbfb
+    .flex-table
+        display: flex
+    .table-obshee
+        text-align: center
+        width: 100%
+        th
+            text-align: left
+            padding: 22px
+            white-space: nowrap
+            border: 2px solid #eee
+        .long-table
+            width: 100px
+    .not-info
+        th
+    .not-info-img
+        margin-right: 3px
+        margin-top: 3px
+    .minus-cena
+        color: red
+.info-dostavka
+    th
+        border: 2px solid #eee
+    td
+        border: 2px solid #eee
+.add-block
+    display: flex
+    justify-content: center
+    align-items: center
+    align-self: center
+    img
+        margin-right: 5px
+    p
+        color: #4c7a94
+.add-button
+    display: flex
+    justify-content: center
+    margin: 20px auto
+    button
+        margin-left: 20px
+        padding: 15px 25px
+        font-weight: 500
+        cursor: pointer
+        border: none
+        outline: none
+        border-radius: 10px
+    .white
+        box-shadow: 0px 4px 14px 0px rgba(34, 60, 80, 0.2)
+        background: transparent
+        color: #000
+    .blue
+        background-color: #4c7a94
+        color: #fff
+.navbar
+    box-shadow: 0px 4px 18px 0px #0000001F
+    padding: 10px 0px
+    .nav-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        align-self: center
+        .nav-brand
+            a
+                text-decoration: none
+                cursor: pointer
+                img
+                    &:hover
+                        opacity: .7
+        .nav-link
+            a
+                text-decoration: none
+                color: #000
+                position: relative
+                cursor: pointer
+                margin-left: 57px
+                font-weight: 600
+                text-transform: uppercase
+                &:nth-child(1)
+                    margin-left: 0px
+                &::after
+                    display: block
+                    position: absolute
+                    left: 0
+                    right: 0
+                    width: 0
+                    height: 2px
+                    background-color: #000
+                    content: ""
+                    transition: width 0.3s ease-out
+                &:hover
+                    &::after
+                        width: 100%
+                &:focus
+                    &::after
+                        width: 100%
+        .nav-reg
+            a
+                text-decoration: none
+                margin-left: 20px
+                &:nth-child(1)
+                    margin-left: 0px
+                &:hover
+                    opacity: .7
+                img
+                    margin-right: 6px
+                    vertical-align: middle
+
+.search
+    form
+        margin-top: 50px
+        min-height: 20px
+        display: flex
+        position: relative
+        input
+            max-width: 100%
+            width: 100%
+            padding: 15px 15px
+            border-radius: 20px
+            outline: none
+            border: 0px none
+            box-shadow: 0px 4px 18px 0px #0000001F
+            color: $blue
+            font-weight: 600
+            font-size: 18px
+        button[type="submit"]
+            width: 20px
+            height: 20px
+            border: none
+            background: url('../img/search.svg') no-repeat 50% 50%
+            position: absolute
+            right: 20px
+            top: 5px
+            padding: 20px 20px
+            border-radius: 100%
+            cursor: pointer
+            &:hover
+                background-color: $blue
+.demo
+    margin: 60px auto
+    border-collapse: collapse
+    border: 2px solid #eeeeee
+    align-items: center
+    align-self: center
+    text-align: left
+    th
+        position: sticky
+        top: 0
+        z-index: 1
+        color: #000
+        border-style: solid
+        border-width: 0 1px 1px 0
+        border-color: #000
+        background-color: #fff
+        border: 2px solid #eee
+    th,td
+        border: 2px solid #eeeeee
+        border-style: solid
+        border-width: 0 1px 1px 0
+        border-color: white
+        padding: 22px
+        border: 1px solid #eee
+    tr
+        &:nth-child(even)
+            background-color: #eeeeee55
+    .short-table
+        width: 100px
+        text-align: left
+    .long-table
+        width: 210px
+    button
+        padding: 14px 26px
+        box-shadow: 0px 4px 18px 0px #0000001F
+        background-color: transparent
+        border: 0px none
+        outline: none
+        border-radius: 13px
+        cursor: pointer
+        margin: 20px auto
+        &:hover
+            box-shadow: 0px 4px 76px 0px rgba(34, 60, 80, 0.2)
+            font-weight: 500
+    .prev2
+        padding: 10px 10px
+        background: url('../img/prev.svg') no-repeat 50% 50%
+        background-color: transparent
+        box-shadow: none
+        align-items: center
+        align-self: center
+    .next2
+        padding: 10px 10px
+        background: url('../img/next.svg') no-repeat 50% 50%
+        background-color: transparent
+        box-shadow: none
+        align-items: center
+        align-self: center
+    .table-center
+        text-align: center
+    .table-prof
+        color: $green
+        font-weight: 600
+    .table-ret
+        font-weight: 600

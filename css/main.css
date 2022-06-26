@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+.container-fluid {
+  max-width: 100%;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0px 20px;
+  margin: 0px auto;
+}
+
+.modal-container {
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+}
+
+.btn {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 34px;
+}
+
+.modal {
+  max-width: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.info-tovar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info-tovar .slide-container {
+  max-width: 300px;
+}
+
+.info-tovar .carousel-container * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.carousel-container img {
+  max-width: 100%;
+  max-height: 267px;
+}
+
+.carousel,
+.carousel-nav--vertical {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 25%;
+}
+
+.carousel {
+  float: right;
+  width: 75%;
+}
+
+.carousel-nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 1%;
+  text-align: center;
+}
+
+.carousel-nav-item {
+  margin-bottom: 15px;
+}
+
+.carousel-details {
+  display: none;
+}
+
+.carousel-nav-item-active {
+  position: relative;
+}
+
+.carousel-nav-item-details {
+  display: block;
+}
+
+.tovar-option .select {
+  position: relative;
+  margin-top: 20px;
+}
+
+.tovar-option .select select {
+  display: block;
+  width: 100%;
+  padding: .75rem 2.5rem .75rem 1rem;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #444;
+}
+
+.tovar-option .select select::after {
+  content: "url(..//img/select-ico.svg)";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+  margin-top: -3px;
+}
+
+.tovar-option .select select:focus {
+  outline: 0;
+  border-color: #0891e6;
+}
+
+.tovar-sb {
+  margin-top: 25px;
+}
+
+.tovar-sb p {
+  border: 1px solid #4C7A94;
+  padding: 10px;
+  max-width: 279px;
+  border-radius: 10px;
+  color: #4C7A94;
+}
+
+.table-info table {
+  border-collapse: collapse;
+  text-align: left;
+  color: #000;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+
+.table-info th, .table-info td {
+  padding: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.table-info th p, .table-info td p {
+  margin: 5px;
+}
+
+.table-info tr {
+  border: 2px solid #eee;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+}
+
+.table-info tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+
+.table-info .flex-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table-info .table-obshee {
+  text-align: center;
+  width: 100%;
+}
+
+.table-info .table-obshee th {
+  text-align: left;
+  padding: 22px;
+  white-space: nowrap;
+  border: 2px solid #eee;
+}
+
+.table-info .table-obshee .long-table {
+  width: 100px;
+}
+
+.table-info .not-info-img {
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+.table-info .minus-cena {
+  color: red;
+}
+
+.info-dostavka th {
+  border: 2px solid #eee;
+}
+
+.info-dostavka td {
+  border: 2px solid #eee;
+}
+
+.add-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.add-block img {
+  margin-right: 5px;
+}
+
+.add-block p {
+  color: #4c7a94;
+}
+
+.add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto;
+}
+
+.add-button button {
+  margin-left: 20px;
+  padding: 15px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.add-button .white {
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 4px 14px 0px rgba(34, 60, 80, 0.2);
+  background: transparent;
+  color: #000;
+}
+
+.add-button .blue {
+  background-color: #4c7a94;
+  color: #fff;
+}
+
+.navbar {
+  -webkit-box-shadow: 0px 4px 18px 0px #0000001F;
+          box-shadow: 0px 4px 18px 0px #0000001F;
+  padding: 10px 0px;
+}
+
+.navbar .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar .nav-content .nav-brand a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar .nav-content .nav-brand a img:hover {
+  opacity: .7;
+}
+
+.navbar .nav-content .nav-link a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+  margin-left: 57px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar .nav-content .nav-link a:nth-child(1) {
+  margin-left: 0px;
+}
+
+.navbar .nav-content .nav-link a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.navbar .nav-content .nav-link a:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-content .nav-link a:focus::after {
+  width: 100%;
+}
+
+.navbar .nav-content .nav-reg a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar .nav-content .nav-reg a:nth-child(1) {
+  margin-left: 0px;
+}
+
+.navbar .nav-content .nav-reg a:hover {
+  opacity: .7;
+}
+
+.navbar .nav-content .nav-reg a img {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.search form {
+  margin-top: 50px;
+  min-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.search form input {
+  max-width: 100%;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 20px;
+  outline: none;
+  border: 0px none;
+  -webkit-box-shadow: 0px 4px 18px 0px #0000001F;
+          box-shadow: 0px 4px 18px 0px #0000001F;
+  color: #4C7A94;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.search form button[type="submit"] {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url("../img/search.svg") no-repeat 50% 50%;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  padding: 20px 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.search form button[type="submit"]:hover {
+  background-color: #4C7A94;
+}
+
+.demo {
+  margin: 60px auto;
+  border-collapse: collapse;
+  border: 2px solid #eeeeee;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: left;
+}
+
+.demo th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: #000;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #000;
+  background-color: #fff;
+  border: 2px solid #eee;
+}
+
+.demo th, .demo td {
+  border: 2px solid #eeeeee;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  padding: 22px;
+  border: 1px solid #eee;
+}
+
+.demo tr:nth-child(even) {
+  background-color: #eeeeee55;
+}
+
+.demo .short-table {
+  width: 100px;
+  text-align: left;
+}
+
+.demo .long-table {
+  width: 210px;
+}
+
+.demo button {
+  padding: 14px 26px;
+  -webkit-box-shadow: 0px 4px 18px 0px #0000001F;
+          box-shadow: 0px 4px 18px 0px #0000001F;
+  background-color: transparent;
+  border: 0px none;
+  outline: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.demo button:hover {
+  -webkit-box-shadow: 0px 4px 76px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 4px 76px 0px rgba(34, 60, 80, 0.2);
+  font-weight: 500;
+}
+
+.demo .prev2 {
+  padding: 10px 10px;
+  background: url("../img/prev.svg") no-repeat 50% 50%;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.demo .next2 {
+  padding: 10px 10px;
+  background: url("../img/next.svg") no-repeat 50% 50%;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.demo .table-center {
+  text-align: center;
+}
+
+.demo .table-prof {
+  color: #53A85B;
+  font-weight: 600;
+}
+
+.demo .table-ret {
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
